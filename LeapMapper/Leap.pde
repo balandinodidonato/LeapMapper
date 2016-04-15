@@ -17,20 +17,16 @@ void leap() {
   // ========= HANDS =========
 
   for (Hand hand : leap.getHands ()) {
-
-    // ----- BASICS -----
     
     hand_id        = hand.getId();
     hand_is_left     = hand.isLeft(); 
-    hand_is_right    = hand.isRight();
-    handIdMapping();
-    
+    hand_is_right    = hand.isRight(); 
     hand_position    = hand.getPosition();
     hand_grab        = hand.getGrabStrength();
     hand_pinch       = hand.getPinchStrength();
-    handMapping();
     
-    // ----- SPECIFIC FINGER -----
+    handIdMapping();
+    handMapping();
 
     Finger  finger_thumb     = hand.getThumb();
     Finger  finger_index     = hand.getIndexFinger();
@@ -38,11 +34,7 @@ void leap() {
     Finger  finger_ring      = hand.getRingFinger();
     Finger  finger_pink      = hand.getPinkyFinger();       
 
-    // ========= FINGERS =========
-
     for (Finger finger : hand.getFingers()) {
-      // hand.getOutstrechtedFingers();
-      // hand.getOutstrechtedFingersByAngle();
       
       finger_id         = finger.getId();
       finger_stabilized   =  finger.getStabilizedPosition();
@@ -51,10 +43,8 @@ void leap() {
  
   // ----- DRAWING -----
   hand.draw();
-  midiValues();
-  if(midi)MIDI();
-  if(osc)OSC();
-  
+  if(midi)MIDImessages();
+  if(osc)OSCmessages(); 
   // ========= DEVICES =========
 
   for (Device device : leap.getDevices ()) {

@@ -1,14 +1,14 @@
 int nDati = 20;
 int[][] leapMIDI = new int[2][nDati];
 
-void handIdMapping(){
- for(int i=0; i<2; i++){
-    for(int z=0; z<nDati; z++){
-       leapMIDI[i][z] = 0;
-     }
-   } 
- if(hand_is_left) hand_id = hand_id - hand_id;
+void handIdMapping(){ 
+ if(hand_is_left){ hand_id = hand_id - hand_id;
+    
+    
+
+ }
  else hand_id = (hand_id - hand_id) + 1;
+    
 }
   
 void handMapping(){
@@ -25,16 +25,6 @@ void fingerMapping(){
      leapMIDI[hand_id][finger_id+10] = int(map(finger_stabilized.y, 58, 450, 127, 0)); // Pitch
      leapMIDI[hand_id][finger_id+15] = int(map(finger_stabilized.z, 40, 68, 0, 127));// Roll
    }
-   
-void midiValues(){
-  for(int i=0; i<2; i++){
-    println("Hand: "+i);
-    for(int z=0; z<nDati; z++){
-     println(leapMIDI[i][z]);
-      }
-    }
-    println("-------");
-  }
 
 
 
