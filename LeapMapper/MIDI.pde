@@ -9,12 +9,9 @@ void setUpMIDI(){
 
 void MIDImessages(){
   for(int i=0; i<2; i++){
-   println("hand "+i);
     for(int z=0; z<nDati; z++){    
      myBus.sendControllerChange(i+1, z+1, leapMIDI[i][z]);
-     println(leapMIDI[i][z]);
       }
     }
-    println("-------"); 
 }
 
