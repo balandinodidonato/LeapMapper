@@ -2,13 +2,9 @@ int nDati = 20;
 int[][] leapMIDI = new int[2][nDati];
 
 void handIdMapping(){ 
- if(hand_is_left){ hand_id = hand_id - hand_id;
-    
-    
-
+ if(hand_is_left){ hand_id = hand_id - hand_id;    
  }
  else hand_id = (hand_id - hand_id) + 1;
-    
 }
   
 void handMapping(){

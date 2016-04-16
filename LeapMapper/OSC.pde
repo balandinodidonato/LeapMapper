@@ -31,7 +31,9 @@ void OSCfingers(){
 void OSCgestures(){
     OscMessage pinch = new OscMessage("/pinch");
     OscMessage grab = new OscMessage("/grab");
+    pinch.add(hand_id);
     pinch.add(hand_pinch);
+    grab.add(hand_id);
     grab.add(hand_grab);
     oscP5.send(pinch, myRemoteLocation);
     oscP5.send(grab, myRemoteLocation);

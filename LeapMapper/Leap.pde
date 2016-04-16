@@ -27,7 +27,6 @@ void leap() {
     
     handIdMapping();
     handMapping();
-    
     if(osc){
       OSChands();
       OSCgestures();
