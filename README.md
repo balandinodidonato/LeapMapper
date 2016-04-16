@@ -1,37 +1,12 @@
-<<<<<<< Updated upstream
 # Leap Mapper
 Leap Mapper is an [open-source](https://opensource.org/) application to manage and send [Leap Motion](https://www.leapmotion.com/) data to any audio and visual software able to receive [OSC](http://opensoundcontrol.org/) and [MIDI](https://www.midi.org/) messages.
 With Leap Mapper you can also send Leap Motion data to any hardware with embedded MIDI connection through a MIDI I/O interface.
 
 Leap Mapper is developed by [Balandino Di Donato](http://www.balandinodidonato.com/) at [Integra Lab](http://www.integra.io).
 
-## License
+## MIDI and OSC
 
-Copyright (c)  2016 - Balandino Di Donato
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-=======
-˜˜# Leap Mapper
-Leap Mapper is an open-source application to send Leap Motion data to third audio and visual softwares or hardware able to receive OSC or MIDI messages.
-Leap Mapper is developped by Balandino Di Donato at Integra Lab using Leap Motion For Processing library.
-
-## MIDI Connection
+### MIDI Connection
 
 The **MIDI port** can be changed through source code
 
@@ -43,9 +18,9 @@ To change cc values of Leap Motion values you have to open the `MIDI.pde` file
 
 and then edit the function to send MIDI data.
 
-    myBus.sendControllerChange(chMIDI, cc, value);
+    myBus.sendControllerChange(channel, cc, value);
 
-## MIDI mapping
+### MIDI mapping
 
 NB: **left hand** Leap Motion data are sent on **channel 1**, and **right hand** Leap Motion data are sent on **channel 2**.
 
@@ -73,7 +48,7 @@ NB: **left hand** Leap Motion data are sent on **channel 1**, and **right hand**
 | 1/2       | 20       | 0-127    | Left/Right Pinky Finger Z   |
 
 
-## OSC Connection
+### OSC Connection
 
 Myo Mapper sends OSC messages at the **port 5432**. To change it you have to go through the following steps:
 
@@ -96,4 +71,25 @@ Myo Mapper sends OSC messages at the **port 5432**. To change it you have to go 
 | Hand id, Finger id, hand position | /finferPosition    | 4 - hand ID, finger ID, finger position X, finger position Y, finger position Z | int, int, float, float,  float  |
 | Pinch          | /pinch  |2 - hand ID, pinch        | int, float  |
 | Grab              | /grab       |2 - hand ID, grab  | int, float      |
->>>>>>> Stashed changes
+
+## License
+
+Copyright (c)  2016 - Balandino Di Donato
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
