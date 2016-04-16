@@ -27,6 +27,11 @@ void leap() {
     
     handIdMapping();
     handMapping();
+    
+    if(osc){
+      OSChands();
+      OSCgestures();
+    }
 
     Finger  finger_thumb     = hand.getThumb();
     Finger  finger_index     = hand.getIndexFinger();
@@ -39,12 +44,13 @@ void leap() {
       finger_id         = finger.getId();
       finger_stabilized   =  finger.getStabilizedPosition();
       fingerMapping();
+      if(osc)OSCfingers(); 
     }
  
   // ----- DRAWING -----
   hand.draw();
   if(midi)MIDImessages();
-  if(osc)OSCmessages(); 
+
   // ========= DEVICES =========
 
   for (Device device : leap.getDevices ()) {
