@@ -2,17 +2,18 @@
 // and send them to thirth party applications able to receive MIDI and/or OSC messages.
 // Leap Mapper is developped by Balandino Di Donato at Integra Lab using Leap Motion For Processing library.
 // For more info about it please visit balandinodidonato.com/LeapMapper or integra.io.
-// © Balandino Di Donato 2016
+// © Balandino Di Donato 2017
 
 void setup(){
   setupLeap();
   setupToggle();
   setUpMIDI();
   oscSetup();
-  size(int(displayWidth*0.5), int(displayHeight*0.5), OPENGL);
+  size(600, 400, OPENGL);
+  frameRate(15);
 }
 
 void draw(){
   background(175);
-  leap(); 
+  leap();
 }
