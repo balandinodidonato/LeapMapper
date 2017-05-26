@@ -56,8 +56,12 @@ Myo Mapper sends OSC messages at the **port 5432**. To change it you have to go 
 
   `open <path>/<to>/LeapMApper/LeapMapper/osc.pde` (from terminal)
 
-- Edit the host IP and port number at the 9th line of code:
-
+- Edit the host IP and port number at the 10th line of code:
+ 
+                                      
+                                  Host IP      Port
+                                      |          |
+                                      V          V
 `myRemoteLocation = new NetAddress("127.0.0.1",5432); // IP address and Port`
 
 - Save the osc.pde file
@@ -76,6 +80,18 @@ Myo Mapper sends OSC messages at the **port 5432**. To change it you have to go 
 | Finfers position        | `/handX/fingerY/position` | `float`, `float`, `float` | `0-1`, `0-1`, `0-1`, |
 | Pinch                   | `/handX/grab`             | `float`                   | `0-1`                |
 | Grab                    | `/handX/grab`             | `float`                   | `0-1`                |
+
+
+## Build
+
+### Requirements
+- [Processing](https://processing.org/)
+
+### Dependecies
+- Leap Motion for Processing
+- ControlP5
+- oscP5
+- The MidiBus
 
 ## License
 
