@@ -48,12 +48,10 @@ void OSCsend(){
    oscP5.send(fingerPositionf4, myRemoteLocation); 
 
     OscMessage pinch = new OscMessage("/hand"+hand_id+"/pinch");
-    pinch.add(hand_id);
     pinch.add(hand_pinch);
     oscP5.send(pinch, myRemoteLocation);
 
     OscMessage grab = new OscMessage("/hand"+hand_id+"/grab");
-    grab.add(hand_id);
     grab.add(hand_grab);
     oscP5.send(grab, myRemoteLocation);
   }
