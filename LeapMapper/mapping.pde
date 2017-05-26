@@ -75,9 +75,9 @@ void handMapping(){
     finger2mappedOSC.y = constrain(finger2mappedOSC.y, 0, 1);
     finger2mappedOSC.z = constrain(finger2mappedOSC.z, 0, 1);   
     
-    finger1mappedMIDI.x =  finger1mappedOSC.x*127; // Yaw
-    finger1mappedMIDI.y =  finger1mappedOSC.y*127; // pitch
-    finger1mappedMIDI.z =  finger1mappedOSC.z*127; // roll
+    finger2mappedMIDI.x =  finger2mappedOSC.x*127; // Yaw
+    finger2mappedMIDI.y =  finger2mappedOSC.y*127; // pitch
+    finger2mappedMIDI.z =  finger2mappedOSC.z*127; // roll
    } 
  
   void finger3mapping(){
