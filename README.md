@@ -4,6 +4,15 @@ With Leap Mapper you can also send Leap Motion data to any hardware with embedde
 
 Leap Mapper is developed by [Balandino Di Donato](http://www.balandinodidonato.com/) at [Integra Lab](http://www.integra.io).
 
+## Requirements
+- [Java](https://www.java.com/en/download/)
+
+## Get started
+- Install [Java](https://www.java.com/en/download/)
+- Launch LeapMapper
+- Switch the MIDI or OSC for sending messages 
+- Open your MIDI or OSC receiver application. If you are sending data via OSC, the set your receiver's port at 5432.'
+
 ## MIDI and OSC
 
 ### MIDI Connection
