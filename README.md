@@ -56,21 +56,26 @@ Myo Mapper sends OSC messages at the **port 5432**. To change it you have to go 
 
   `open <path>/<to>/LeapMApper/LeapMapper/osc.pde` (from terminal)
 
-- Edit the number port at the 10th code line:
+- Edit the host IP and port number at the 9th line of code:
 
-  `myRemoteLocation = new NetAddress("127.0.0.1",5432); // IP address and Port`
+`myRemoteLocation = new NetAddress("127.0.0.1",5432); // IP address and Port`
 
 - Save the osc.pde file
 - Compile or Export application again.
 
 ### OSC mapping
 
-| Leap Motion parameter    | OSC tag          |n. values | range values  |
-| :---:                    | :---:            | :---:    | :---:         |
-| Hand id, hand position | /handPosition    | 4 - hand ID, hand position X, hand position Y, hand position Z | int, float, float,  float  |
-| Hand id, Finger id, hand position | /finferPosition    | 4 - hand ID, finger ID, finger position X, finger position Y, finger position Z | int, int, float, float,  float  |
-| Pinch          | /pinch  |2 - hand ID, pinch        | int, float  |
-| Grab              | /grab       |2 - hand ID, grab  | int, float      |
+*Legend*
+
+- X = 1 left; 1 = right
+- Y = finger number, 0, 1, 2, 3, 4
+
+| Leap Motion parameter   | OSC tag                   | Value type                | Range values         |
+| :---:                   | :---:                     | :---:                     | :---:                |
+| Hands position          | `/handX/position`         | `float`, `float`, `float` | `0-1`, `0-1`, `0-1`  |
+| Finfers position        | `/handX/fingerY/position` | `float`, `float`, `float` | `0-1`, `0-1`, `0-1`, |
+| Pinch                   | `/handX/grab`             | `float`                   | `0-1`                |
+| Grab                    | `/handX/grab`             | `float`                   | `0-1`                |
 
 ## License
 
