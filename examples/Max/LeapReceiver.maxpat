@@ -38,12 +38,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 19.0, 14.0, 400.0, 33.0 ],
+					"style" : "",
+					"text" : "LEAP MAPPER RECEIVER\nDownload Leap Mapper at www.balandinodidonato.com/leapmapper"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-68",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 409.0, 90.0, 29.5, 22.0 ],
+					"patching_rect" : [ 415.0, 132.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "t l l"
 				}
@@ -56,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 362.0, 20.0, 135.0, 22.0 ],
+					"patching_rect" : [ 368.0, 62.0, 135.0, 22.0 ],
 					"style" : "",
 					"text" : "udpreceive 5432 cnmat"
 				}
@@ -69,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "OSCTimeTag" ],
-					"patching_rect" : [ 362.0, 56.0, 113.0, 22.0 ],
+					"patching_rect" : [ 368.0, 98.0, 113.0, 22.0 ],
 					"style" : "",
 					"text" : "OpenSoundControl"
 				}
@@ -1345,7 +1358,7 @@
 					"destination" : [ "obj-64", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 429.0, 136.5, 637.5, 136.5 ],
+					"midpoints" : [ 435.0, 157.5, 637.5, 157.5 ],
 					"source" : [ "obj-68", 1 ]
 				}
 
@@ -1355,7 +1368,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 418.5, 144.0, 85.5, 144.0 ],
+					"midpoints" : [ 424.5, 165.0, 85.5, 165.0 ],
 					"source" : [ "obj-68", 0 ]
 				}
 
