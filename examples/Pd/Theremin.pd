@@ -6,46 +6,46 @@
 #X msg 15 112 listen 5432;
 #X obj 32 233 unpack f f f;
 #X obj 32 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12268 1;
 #X obj 66 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3479 1;
 #X obj 101 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4863 1;
 #X obj 232 233 unpack f f f;
 #X obj 232 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 266 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5403 1;
 #X obj 301 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 978 1;
 #X obj 333 233 unpack f f f;
 #X obj 333 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 367 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5252 1;
 #X obj 402 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4675 1;
 #X obj 433 233 unpack f f f;
 #X obj 433 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 467 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5312 1;
 #X obj 502 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5769 1;
 #X obj 534 233 unpack f f f;
 #X obj 534 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 568 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4960 1;
 #X obj 603 255 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5815 1;
 #X obj 635 232 unpack f f f;
 #X obj 635 254 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 12387 1;
 #X obj 669 254 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4718 1;
 #X obj 704 254 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5547 1;
 #X obj 148 256 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 182 256 vsl 20 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -213,9 +213,6 @@ finger4;
 #X connect 15 0 1 0;
 #X connect 16 0 9 0;
 #X restore 32 418 pd synth-L;
-#X obj 174 105 dac~;
-#X obj 174 85 tgl 15 0 empty empty <--_Turn_the_audio_ON 17 7 0 10
--262144 -1 -1 0 1;
 #N canvas 0 23 450 300 synth-R 0;
 #X obj 79 25 inlet;
 #X obj 79 113 * 1800;
@@ -287,8 +284,8 @@ Motion and Leap Mapper.;
 #X connect 31 0 32 0;
 #X connect 31 1 33 0;
 #X connect 31 2 34 0;
-#X connect 32 0 76 0;
-#X connect 33 0 76 1;
+#X connect 32 0 74 0;
+#X connect 33 0 74 1;
 #X connect 35 0 36 0;
 #X connect 35 1 37 0;
 #X connect 35 2 38 0;
@@ -320,4 +317,3 @@ Motion and Leap Mapper.;
 #X connect 58 5 43 0;
 #X connect 58 6 47 0;
 #X connect 58 7 51 0;
-#X connect 75 0 74 0;
